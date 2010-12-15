@@ -1,0 +1,19 @@
+Queries Etherpad database for a list of all documents.  Generates
+four static HTML files which present the list sorted by name,
+creation date, modification date, and usage.
+
+Note that the database connection parameters are hardcoded in 
+the python script.  Change as needed.
+
+When configured correctly with an apache home directory and 
+cron job, this script can provide the much needed functionality
+of finding stuff in etherpad.
+
+usage:  list_etherpads.py <outputdir> <basename>
+
+writes four html files to <outputdir>:
+   <basename>_name.html
+   <basename>_created.html  
+   <basename>_modified.html  
+   <basename>_usage.html
+
